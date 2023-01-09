@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="Find news from around the world. News from different publications in one place.">
+    <meta name="author" content="Ilhom Dadadjanova">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../assets/favicon.png" sizes="16x16" />
+    <!-- OG meta tags -->
+    <meta property="og:title" content="News from whole world!" />
+    <meta property="og:description"
+        content="Find news from around the world. News from different publications in one place." />
+    <meta property="og:url" content="https://musical-clafoutis-72ef57.netlify.app/" />
+    <meta property="og:image" content="https://iili.io/Hok4F9I.md.jpg" />
+    <!-- Twitter -->
+    <meta name="twitter:title" content="News from whole world!" />
+    <meta name="twitter:description"
+        content="Find news from around the world. News from different publications in one place." />
+    <meta name="twitter:image" content="https://iili.io/Hok4F9I.md.jpg" />
+    <meta name="twitter:card" content="../assets/logo_big.png" />
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/2a11852330.js" crossorigin="anonymous"></script>
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Style and JavaScript -->
+    <script type='text/javascript' src='../config.js'></script>
+    <script type="module" type='text/javascript' src="../assets/script/index.js"></script>
+    <script src="../assets/script/footer.js"></script>
+    <link rel="stylesheet" href="../assets/css/index.css" type="text/css" />
+    <title>News from whole world!</title>
+</head>
+
+<body>
+    <div id="wrapper" class="wrapper">
+        <!-- Modals -->
+        <div class="language" id="language">
+            <div class="language_head">
+                <img src="../assets/logo_big.png" alt="Logo">
+            </div>
+            <div class="language_cards">
+                <a href="../se">
+                    <img src="../assets/flags/sweden.png" alt="swedish flag">
+                    <h4>swedish</h4>
+                </a>
+                <a href="../ru">
+                    <img src="../assets/flags/russia.png" alt="russian flag">
+                    <h4>russian</h4>
+                </a>
+                <a href="../tr">
+                    <img src="../assets/flags/turkey.png" alt="turkish flag">
+                    <h4>turkish</h4>
+                </a>
+                <a href="../ua">
+                    <img src="../assets/flags/ukraine.png" alt="ukrainian flag">
+                    <h4>ukrainian</h4>
+                </a>
+                <a href="../gb">
+                    <img src="../assets/flags/gb.jpg" alt="ukrainian flag">
+                    <h4>United kingdom</h4>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="category" id="category">
+            <div class="category_head">
+                <img src="../assets/logo_big.png" alt="Logo">
+            </div>
+            <div class="category_cards">
+                <a href="business.html">business</a>
+                <a href="/entertainment">entertainment</a>
+                <a href="/environment">environment</a>
+                <a href="/food">food</a>
+                <a href="/health">health</a>
+                <a href="/politics">politics</a>
+                <a href="/science">science</a>
+                <a href="/sports">sports</a>
+                <a href="/technology">technology</a>
+            </div>
+
+        </div>
+
+        <div class="search" id="search">
+            <div class="head">
+                <img src="../assets/logo_big.png" alt="Logo">
+            </div>
+            <form id="form">
+                <input type="text" placeholder="Search news...">
+                <input type="submit" value="search" id="submitBtn">
+            </form>
+        </div>
+
+        <button class="toTop hidden">
+            <i class=" fa-solid fa-chevron-up"></i>
+        </button>
+
+        <header>
+            <!-- main section of the page -->
+            <section class="hero">
+                <i class="fa-solid fa-chevron-left"></i>
+                <i class="fa-solid fa-chevron-right"></i>
+                <!-- Hero section of the paga -->
+                <div class="hero-imgContainer">
+                    <div class="hero-imgContainer-images" id="hero-imgContainer-images"></div>
+            </section>
+        </header>
+
+        <main>
+            <section class="newsFeed">
+                <div class="newsFeed-popular">
+                    <h2 class="newsFeed-popular-latest active" id="latestNewsHero">Latest News</h2>
+                    <h2 class="newsFeed-popular-most" id="topNewsHero">Top News</h2>
+                </div>
+
+                <div class="latestNewsHero active">
+                    <div class="article-container">
+                        <!-- <a href="/news/article-name.html">
+                            <h4>Nearly 45,000 criminal cases opened against Russian military since Feb. 24, Ukrainian
+                            </h4>
+                            <span>2022.12.12</span>
+                            <img src="../mockups/asia.jpg" alt="Titel">
+                        </a> -->
+                    </div>
+                    <button class="loadMore">load more<br>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                </div>
+
+                <div class="topNewsHero">
+                    <div class="article-container">
+                        <!-- <a href="/news/article-name.html">
+                            <h4>Nearly 45,000 criminal cases opened against Russian military since Feb. 24, Ukrainian
+                            </h4>
+                            <span>2022.12.12</span>
+                            <img src="../mockups/biden.jpg" alt="Titel">
+                        </a> -->
+                    </div>
+                    <button class="loadMore">load more<br>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                </div>
+            </section>
+
+            <nav class="nav" id="nav">
+                <ul>
+                    <li class="politics"><a href="#politics">politics</a></li>
+                    <li class="business"><a href="#business">business</a></li>
+                    <li class="sports"><a href="#sports">sports</a></li>
+                    <li class="health"><a href="#health">health</a></li>
+                    <li class="entertainment"><a href="#entertainment">entertainment</a></li>
+                    <li class="technology"><a href="#technology">technology</a></li>
+                </ul>
+            </nav>
+
+            <section class="politics" id="politics">
+                <div class="article-container">
+                </div>
+                <button class="loadMore">load more<br>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+            </section>
+
+            <section class="business" id="business">
+                <div class="article-container"></div>
+                <button class="loadMore">load more<br>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+            </section>
+
+            <section class="sports" id="sports">
+                <div class="article-container"></div>
+                <button class="loadMore">load more<br>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+            </section>
+
+            <section class="health" id="health">
+                <div class="article-container"></div>
+                <button class="loadMore">load more<br>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+            </section>
+
+            <section class="entertainment" id="entertainment">
+                <div class="article-container"></div>
+                <button class="loadMore">load more<br>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+            </section>
+
+            <section class="technology" id="technology">
+                <div class="article-container"></div>
+                <button class="loadMore">load more<br>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+            </section>
+
+        </main>
+        <footer>
+            <button class="footer-container-links" id="langBtn">
+                <i class="fas fa-globe-americas"></i>
+            </button>
+            <button class="footer-container-links" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <button class="home">
+                <a href="/">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+            </button>
+            <button class="footer-container-links" id="searchBtn">
+                <i class="fas fa-search"></i>
+            </button>
+            <button class="footer-container-links" id="mode">
+                <i class="fas fa-adjust"></i>
+            </button>
+        </footer>
+    </div>
+    <h1 class="warn-message">The page does not support large screens. Please use mobile devices with a maximum screen
+        size of 1024px. Thanks!
+    </h1>
+</body>
+
+</html>

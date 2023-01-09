@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    a {
+        text-decoration: none;
+        display: block;
+    }
+}
+
+.warn-message {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 1025px) {
+        display: none;
+    }
+}
+.wrapper {
+    min-height: 100vh;
+    @media screen and (min-width: 1025px) {
+        display: none;
+    }
+}
+
+.wrapper {
+    background-color: $primary-bg-light;
+    transition: background-color 300ms ease, color 300ms ease;
+    color: $primary-font-light;
+    padding-bottom: 2rem;
+}
+
+.wrapper.dark {
+    background-color: $primary-bg-dark;
+    color: $primary-font-dark;
+    transition: background-color 300ms ease, color 300ms ease;
+}

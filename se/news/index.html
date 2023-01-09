@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="Hitta nyheter från hela världen. Nyheter från olika publikationer på ett ställe.">
+    <meta name="author" content="Ilhom Dadadjanova">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../../assets/favicon.png" sizes="16x16" />
+    <!-- OG meta tags -->
+    <meta property="og:title" content="Nyheter från hela världen!" />
+    <meta property="og:description"
+        content="Hitta nyheter från hela världen. Nyheter från olika publikationer på ett ställe." />
+    <meta property="og:url" content="https://musical-clafoutis-72ef57.netlify.app/" />
+    <meta property="og:image" content="https://iili.io/Hok4F9I.md.jpg" />
+    <!-- Twitter -->
+    <meta name="twitter:title" content="Nyheter från hela världen!" />
+    <meta name="twitter:description"
+        content="Hitta nyheter från hela världen. Nyheter från olika publikationer på ett ställe." />
+    <meta name="twitter:image" content="https://iili.io/Hok4F9I.md.jpg" />
+    <meta name="twitter:card" content="../../assets/logo_big.png" />
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/2a11852330.js" crossorigin="anonymous"></script>
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Style and JavaScript -->
+    <link rel="stylesheet" href="../../assets/css/news.css" type="text/css" />
+    <script type='text/javascript' src='../../config.js'></script>
+    <script type="module" type='text/javascript' src="../../assets/script/news.js"></script>
+    <script type='text/javascript' src='../../assets/script/footer.js'></script>
+    <title>Nyheter från hela världen!</title>
+</head>
+
+<body>
+    <div id="wrapper" class="wrapper">
+        <!-- Modals -->
+        <div class="language" id="language">
+            <div class="language_head">
+                <img src="../assets/logo_big.png" alt="Logo">
+            </div>
+            <div class="language_cards">
+                <a href="../se">
+                    <img src="../assets/flags/sweden.png" alt="swedish flag">
+                    <h4>svenska</h4>
+                </a>
+                <a href="../gb">
+                    <img src="../assets/flags/gb.jpg" alt="ukrainian flag">
+                    <h4>Engelska</h4>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="category" id="category">
+            <div class="category_head">
+                <img src="../assets/logo_big.png" alt="Logo">
+            </div>
+            <div class="category_cards">
+                <a href="business.html">affärslivet</a>
+                <a href="/entertainment">underhållning</a>
+                <a href="/environment">miljö</a>
+                <a href="/food">mat</a>
+                <a href="/health">hälsa</a>
+                <a href="/politics">politik</a>
+                <a href="/science">vetenskap</a>
+                <a href="/sports">sport</a>
+                <a href="/technology">teknologi</a>
+            </div>
+
+        </div>
+
+        <div class="search" id="search">
+            <div class="head">
+                <img src="../assets/logo_big.png" alt="Logo">
+            </div>
+            <form id="form">
+                <input type="text" placeholder="Sök nyheter...">
+                <input type="submit" value="sök" id="submitBtn">
+            </form>
+        </div>
+
+        <button class="toTop hidden">
+            <i class=" fa-solid fa-chevron-up"></i>
+        </button>
+
+        <header>
+            <a href="#" id="backBtn">
+                <i class="fa-solid fa-chevron-left"></i>
+            </a>
+            <img src="../../assets/logo_big.png" alt="Logo Unspoken">
+        </header>
+        <main>
+            <section class="content hide" id="content">
+                <section class="titel">
+                    <h1 id="category-titel"></h1>
+                    <div></div>
+                </section>
+                <div class="news">
+                    <div class="article-container">
+                        <!-- 
+                        <a href="/news/article-name.html">
+                            <h4>Nearly 45,000 criminal cases opened against Russian military since Feb. 24, Ukrainian
+                            </h4>
+                            <span>2022.12.12</span>
+                            <img src="../../mockups/asia.jpg" alt="Titel">
+                        </a> 
+                        -->
+                    </div>
+                    <div class="pages">
+                        <p>Sida <span id="actuel"></span> av <span id="total"></span></p>
+                        <a href="#" id="prev">föregående</a>
+                        <a href="#" id="next">Nästa</a>
+                    </div>
+                </div>
+            </section>
+            <div class="menu hide" id="menu">
+                <a href="business.html">affärslivet</a>
+                <a href="/entertainment">underhållning</a>
+                <a href="/environment">miljö</a>
+                <a href="/food">mat</a>
+                <a href="/health">hälsa</a>
+                <a href="/politics">politik</a>
+                <a href="/science">vetenskap</a>
+                <a href="/sports">sport</a>
+                <a href="/technology">teknologi</a>
+            </div>
+        </main>
+        <footer>
+            <button class="footer-container-links" id="langBtn">
+                <i class="fas fa-globe-americas"></i>
+            </button>
+            <button class="footer-container-links" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <button class="home">
+                <a href="/">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+            </button>
+            <button class="footer-container-links" id="searchBtn">
+                <i class="fas fa-search"></i>
+            </button>
+            <button class="footer-container-links" id="mode">
+                <i class="fas fa-adjust"></i>
+            </button>
+        </footer>
+    </div>
+    <div class="warn-message">
+        <h1>The page does not support large screens. Please use mobile devices with a maximum screen
+            size of 1024px. Thanks!
+        </h1>
+    </div>
+</body>
+
+</html>
