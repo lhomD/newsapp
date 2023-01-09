@@ -11,6 +11,7 @@ let modeBtn;
 let searchForm;
 let searFormModal;
 let goTopBtn;
+let langPath;
 //--------------------------------------------
 function init() {
     //--------------------------------------------
@@ -49,7 +50,8 @@ function init() {
     goTopBtn = document.querySelector(".toTop");
     goTopBtn.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" })
-    })
+    });
+
     getTheme();
 }//End init
 window.addEventListener("load", init);
@@ -94,6 +96,20 @@ function getTheme() {
     let themeMode = localStorage.getItem("mode");
     if (themeMode) {
         wrapper.classList.add(themeMode);
+    }
+    //------------------------------------------------------------------
+    if (langPath) {
+        location.href = langPath;
+    } else {
+        let anchorEl = document.querySelectorAll(".language a");
+        anchorEl.forEach((aEl) => {
+            aEl.addEventListener("click", (e) => {
+                e.preventDefault();
+                let lang = aEl.getAttribute("href");
+                localStorage.setItem("lang", lang);
+                location.href = lang;
+            })
+        });
     }
 }
 //--------------------------------------------
