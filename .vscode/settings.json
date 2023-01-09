@@ -2,5 +2,6 @@
     "files.autoSave": "onFocusChange",
     "prettier.bracketSpacing": true,
     "prettier.bracketSameLine": true,
-    "prettier.enableDebugLogs": true
+    "prettier.enableDebugLogs": true,
+    "liveServer.settings.port": 5501
 }
