@@ -77,7 +77,7 @@ function searchNews(e) {
 //--------------------------------------------
 function categoryUrl(e) {
     e.preventDefault();
-    let urlAdress = encodeURIComponent(this.innerHTML);
+    let urlAdress = encodeURIComponent(this.attributes[0].nodeValue);
     let pathname = location.pathname.split("/");
     if (pathname.length == 4) {
         location.assign("../news/?" + urlAdress);
