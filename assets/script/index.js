@@ -105,7 +105,7 @@ function language() {
 //----------------------------------------------
 async function heroNews() {
   while (latestNewsArr.length < 5) {
-    let response = await getData(apiUrl + apiKey + "&language=" + lang + "&&category=top&country=" + country[0] + "&page=" + latestNewsNr);
+    let response = await getData(apiUrl + apiKey + "&language=" + lang + "&category=top&country=" + country[0] + "&page=" + latestNewsNr);
     for (let i = 0; i < response.results.length; i++) {
       if (response.results[i].image_url) {
         latestNewsArr.push(response.results[i])
@@ -147,11 +147,11 @@ async function latestNews() {
   loadrMore.addEventListener("click", latestNews);
 
   while (latestNewsArr.length < 5) {
-    let response = await getData(apiUrl + apiKey + "&language=" + lang + "&&category=top&country=" + country[0] + "&page=" + latestNewsNr);
+    let response = await getData(apiUrl + apiKey + "&language=" + lang + "&category=top&country=" + country[0] + "&page=" + latestNewsNr);
     for (let i = 0; i < response.results.length; i++) {
-      if (response.results[i].image_url) {
-        latestNewsArr.push(response.results[i])
-      }
+      /* if (response.results[i].image_url) { */
+      latestNewsArr.push(response.results[i])
+      /* } */
     }
     latestNewsNr++;
   };
@@ -179,9 +179,9 @@ async function topNews() {
   while (topNewsArr.length < 5) {
     let response = await getData(apiUrl + apiKey + "&country=" + country[0] + "&category=business,politics,sports,technology&page=" + topNewsNr);
     for (let i = 0; i < response.results.length; i++) {
-      if (response.results[i].image_url) {
-        topNewsArr.push(response.results[i])
-      }
+      /* if (response.results[i].image_url) { */
+      topNewsArr.push(response.results[i])
+      /* } */
     }
     topNewsNr++;
   };
@@ -209,9 +209,9 @@ async function politics() {
   while (politicsArr.length < 5) {
     let response = await getData(apiUrl + apiKey + "&country=" + country[0] + "&category=politics&page=" + politicsNr);
     for (let i = 0; i < response.results.length; i++) {
-      if (response.results[i].image_url) {
-        politicsArr.push(response.results[i])
-      }
+      /* if (response.results[i].image_url) { */
+      politicsArr.push(response.results[i])
+      /* } */
     }
     politicsNr++;
   };
@@ -241,9 +241,9 @@ async function business() {
   while (businessArr.length < 5) {
     let response = await getData(apiUrl + apiKey + "&country=" + country[0] + "&category=business&page=" + businessNr);
     for (let i = 0; i < response.results.length; i++) {
-      if (response.results[i].image_url) {
-        businessArr.push(response.results[i])
-      }
+      /* if (response.results[i].image_url) { */
+      businessArr.push(response.results[i])
+      /* } */
     }
     businessNr++;
   };
@@ -273,9 +273,9 @@ async function sports() {
   while (sportsArr.length < 5) {
     let response = await getData(apiUrl + apiKey + "&country=" + country[0] + "&category=sports&page=" + sportsNr);
     for (let i = 0; i < response.results.length; i++) {
-      if (response.results[i].image_url) {
-        sportsArr.push(response.results[i])
-      }
+      /* if (response.results[i].image_url) { */
+      sportsArr.push(response.results[i])
+      /* } */
     }
     sportsNr++;
   };
@@ -305,9 +305,9 @@ async function health() {
   while (healthArr.length < 5) {
     let response = await getData(apiUrl + apiKey + "&country=" + country + "&category=health&page=" + healthNr);
     for (let i = 0; i < response.results.length; i++) {
-      if (response.results[i].image_url) {
-        healthArr.push(response.results[i])
-      }
+      /* if (response.results[i].image_url) { */
+      healthArr.push(response.results[i])
+      /* } */
     }
     healthNr++;
   };
@@ -335,9 +335,9 @@ async function entertainment() {
   while (entertainmentArr.length < 5) {
     let response = await getData(apiUrl + apiKey + "&country=" + country[0] + "&category=entertainment&page=" + entertainmentNr);
     for (let i = 0; i < response.results.length; i++) {
-      if (response.results[i].image_url) {
-        entertainmentArr.push(response.results[i])
-      }
+      /* if (response.results[i].image_url) { */
+      entertainmentArr.push(response.results[i])
+      /* } */
     }
     entertainmentNr++;
   };
@@ -366,9 +366,9 @@ async function technology() {
   while (technologyArr.length < 5) {
     let response = await getData(apiUrl + apiKey + "&country=" + country[0] + "&category=technology&page=" + technologyNr);
     for (let i = 0; i < response.results.length; i++) {
-      if (response.results[i].image_url) {
-        technologyArr.push(response.results[i])
-      }
+      /* if (response.results[i].image_url) { */
+      technologyArr.push(response.results[i])
+      /* } */
     }
     technologyNr++;
   };
